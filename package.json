@@ -11,9 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.1.0",
-    "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/netlify": "^4.0.0"
+    "@astrojs/netlify": "^4.0.0",
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^4.1.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.3.0",

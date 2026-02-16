@@ -5,7 +5,7 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
   site: 'https://glowpicked.com',
   integrations: [
-    sitemap()
+    // sitemap() // TODO: fix sitemap plugin compatibility
   ],
   output: 'static',
   adapter: netlify(),
