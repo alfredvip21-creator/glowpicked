@@ -298,16 +298,20 @@ const products = {
   }
 
   .cta-button {
-    display: block;
+    display: inline-block;
     background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: white;
     text-decoration: none;
-    padding: 1rem 2rem;
+    padding: 0.7rem 1.8rem;
     text-align: center;
     font-weight: 600;
-    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    border-radius: 50px;
     transition: all 0.3s ease;
-    width: 100%;
+  }
+  
+  .cta-wrapper {
+    text-align: center;
   }
 
   .cta-button:hover {
@@ -315,11 +319,7 @@ const products = {
     box-shadow: var(--shadow-lg);
   }
 
-  @media (max-width: 768px) {
-    .cta-button {
-      width: 100%;
-    }
-  }
+
 
   .methodology-section {
     background: var(--bg-light);
