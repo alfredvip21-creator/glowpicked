@@ -136,9 +136,11 @@ const pageSchema = JSON.stringify({
               <div class="con">
                 ❌ {product.con}
               </div>
-              <a href={`https://www.amazon.com/dp/${product.asin}/ref=nosim?tag=glowpicked0c-20`} class="cta-button" target="_blank" rel="nofollow sponsored">
-                Check Price on Amazon
-              </a>
+              <div class="cta-wrapper">
+                <a href={`https://www.amazon.com/dp/${product.asin}/ref=nosim?tag=glowpicked0c-20`} class="cta-button" target="_blank" rel="nofollow sponsored">
+                  Check Price on Amazon
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -162,9 +164,11 @@ const pageSchema = JSON.stringify({
               <div class="con">
                 ❌ {product.con}
               </div>
-              <a href={`https://www.amazon.com/dp/${product.asin}/ref=nosim?tag=glowpicked0c-20`} class="cta-button" target="_blank" rel="nofollow sponsored">
-                Check Price on Amazon
-              </a>
+              <div class="cta-wrapper">
+                <a href={`https://www.amazon.com/dp/${product.asin}/ref=nosim?tag=glowpicked0c-20`} class="cta-button" target="_blank" rel="nofollow sponsored">
+                  Check Price on Amazon
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -256,7 +260,8 @@ const pageSchema = JSON.stringify({
   .pros-list { list-style: none; margin-bottom: 1.5rem; }
   .pros-list li { margin-bottom: 0.5rem; color: var(--text); font-size: 1rem; }
   .con { background: #f8f9fa; padding: 1rem; border-left: 4px solid #dc3545; margin-bottom: 1.5rem; color: var(--text); border-radius: 0 8px 8px 0; }
-  .cta-button { display: block; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; text-decoration: none; padding: 1rem 2rem; text-align: center; font-weight: 600; border-radius: var(--border-radius); transition: all 0.3s ease; width: 100%; }
+  .cta-wrapper { text-align: center; margin-top: 1rem; }
+  .cta-button { display: inline-block; background: linear-gradient(135deg, #e91e63, #c2185b); color: white; text-decoration: none; padding: 0.6rem 1.5rem; text-align: center; font-weight: 600; font-size: 0.9rem; border-radius: 50px; transition: all 0.2s ease; }
   .cta-button:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
   .methodology-section { background: var(--bg-light); padding: 4rem 0; }
   .methodology-section h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif; }
