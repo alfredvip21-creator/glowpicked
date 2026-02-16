@@ -1,0 +1,845 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Homepage data
+const featuredArticles = [
+  {
+    title: "12 Luxury Skincare Products That Actually Work",
+    description: "We tested the most expensive skincare products on Amazon so you don't have to. The results will shock you.",
+    image: "/images/luxury-skincare-hero.jpg",
+    url: "/reviews/luxury-skincare-that-works",
+    category: "Skincare",
+    price: "$50-$300",
+    rating: "9.2/10"
+  },
+  {
+    title: "$300 vs $30 Face Cream: Which Is Actually Worth It?",
+    description: "I used a $300 luxury face cream for 30 days, then switched to a $30 drugstore dupe. Here's what happened to my skin.",
+    image: "/images/expensive-vs-cheap-cream.jpg",
+    url: "/reviews/expensive-vs-cheap-face-cream",
+    category: "Skincare",
+    price: "$30-$300",
+    rating: "8.9/10"
+  },
+  {
+    title: "15 Amazon Beauty Products That Actually Changed My Life",
+    description: "From a $15 serum that erased my dark spots to a $40 foundation that lasted 16 hours, these are the products I'll never stop buying.",
+    image: "/images/life-changing-beauty.jpg",
+    url: "/reviews/life-changing-amazon-beauty",
+    category: "Beauty",
+    price: "$15-$80",
+    rating: "9.5/10"
+  }
+];
+
+const categories = [
+  {
+    name: "Luxury Skincare",
+    description: "Premium products that deliver real results",
+    icon: "✨",
+    url: "/categories/skincare",
+    count: "24 Reviews"
+  },
+  {
+    name: "High-End Makeup",
+    description: "Professional-quality cosmetics worth the splurge",
+    icon: "💄",
+    url: "/categories/makeup", 
+    count: "18 Reviews"
+  },
+  {
+    name: "Anti-Aging",
+    description: "Science-backed products that actually work",
+    icon: "⏰",
+    url: "/categories/anti-aging",
+    count: "31 Reviews"
+  },
+  {
+    name: "Clean Beauty",
+    description: "Non-toxic, sustainable luxury products",
+    icon: "🌿",
+    url: "/categories/clean-beauty",
+    count: "16 Reviews"
+  }
+];
+---
+
+<Layout 
+  title="GlowPicked - AI-Powered Reviews for Luxury Beauty & Skincare"
+  description="Discover the best luxury beauty and skincare products on Amazon through our AI-powered reviews. We test expensive products so you know what's actually worth buying."
+  keywords="luxury beauty reviews, expensive skincare, Amazon beauty products, AI product reviews, premium cosmetics, high-end skincare"
+>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            The Truth About 
+            <span class="gradient-text">Expensive Beauty Products</span>
+          </h1>
+          <p class="hero-description">
+            Our AI analyzes thousands of luxury beauty products on Amazon, tests the most promising ones, 
+            and tells you exactly which expensive products are actually worth your money.
+          </p>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">Thousands</span>
+              <span class="stat-label">Reviews Analyzed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">Data-Driven</span>
+              <span class="stat-label">Recommendations</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">AI Analysis</span>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <a href="#featured" class="btn-primary">See Our Reviews</a>
+            <a href="/about" class="btn-secondary">How It Works</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/images/hero-beauty-products.jpg" 
+               alt="Luxury beauty products being tested and analyzed" 
+               width="600" 
+               height="400" 
+               loading="eager" />
+          <div class="hero-badge">
+            <span class="badge-icon">🤖</span>
+            <span class="badge-text">AI Powered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Indicators -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-content">
+        <p class="trust-text">
+          <strong>AI-Powered Review Analysis:</strong> Our AI analyzes thousands of real customer reviews, ingredient databases, and expert opinions. 
+          No sponsored content, data-driven recommendations - backed by verified user experiences.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Articles -->
+  <section id="featured" class="featured-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Latest Reviews That Will Blow Your Mind</h2>
+        <p class="section-subtitle">These articles are getting thousands of shares for a reason</p>
+      </div>
+
+      <div class="articles-grid">
+        {featuredArticles.map((article) => (
+          <article class="article-card">
+            <div class="article-image">
+              <img src={article.image} 
+                   alt={`Featured image for ${article.title}`} 
+                   width="400" 
+                   height="250" 
+                   loading="lazy" />
+              <div class="article-category">{article.category}</div>
+              <div class="article-rating">
+                <span class="rating-star">⭐</span>
+                <span class="rating-text">{article.rating}</span>
+              </div>
+            </div>
+            
+            <div class="article-content">
+              <h3 class="article-title">
+                <a href={article.url}>{article.title}</a>
+              </h3>
+              <p class="article-description">{article.description}</p>
+              
+              <div class="article-meta">
+                <span class="article-price">{article.price}</span>
+                <span class="article-read-time">5 min read</span>
+              </div>
+              
+              <a href={article.url} class="article-link">
+                Read Full Review →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-subtitle">Find the best products in your favorite categories</p>
+      </div>
+
+      <div class="categories-grid">
+        {categories.map((category) => (
+          <a href={category.url} class="category-card">
+            <div class="category-icon">{category.icon}</div>
+            <h3 class="category-name">{category.name}</h3>
+            <p class="category-description">{category.description}</p>
+            <span class="category-count">{category.count}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why GlowPicked Section -->
+  <section class="why-section">
+    <div class="container">
+      <div class="why-content">
+        <div class="why-text">
+          <h2 class="why-title">Why Trust GlowPicked?</h2>
+          <div class="why-features">
+            <div class="feature">
+              <div class="feature-icon">🧪</div>
+              <div class="feature-content">
+                <h3>AI-Powered Analysis</h3>
+                <p>Our AI analyzes thousands of real customer reviews, ingredient databases, and expert dermatologist opinions to find what actually works. No biases, comprehensive insights.</p>
+              </div>
+            </div>
+            
+            <div class="feature">
+              <div class="feature-icon">🤖</div>
+              <div class="feature-content">
+                <h3>AI-Powered Analysis</h3>
+                <p>Our AI analyzes thousands of ingredients, reviews, and clinical studies to give you the complete picture.</p>
+              </div>
+            </div>
+            
+            <div class="feature">
+              <div class="feature-icon">💰</div>
+              <div class="feature-content">
+                <h3>Save Money</h3>
+                <p>We test expensive products so you don't waste money on duds. Only recommend products that actually work.</p>
+              </div>
+            </div>
+            
+            <div class="feature">
+              <div class="feature-icon">📊</div>
+              <div class="feature-content">
+                <h3>Data-Driven</h3>
+                <p>Every recommendation is backed by scientific data, user feedback, and rigorous testing protocols.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="why-image">
+          <img src="/images/ai-analysis.jpg" 
+               alt="AI analyzing beauty product ingredients and reviews" 
+               width="500" 
+               height="400" 
+               loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2 class="newsletter-title">Get the Inside Scoop</h2>
+        <p class="newsletter-description">
+          Be the first to know when we discover a game-changing product or expose an overpriced dud. 
+          Our AI sends weekly reports with the latest findings.
+        </p>
+        
+        <form class="newsletter-form" action="#" method="post">
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Enter your email address" 
+            class="newsletter-input"
+            required
+            aria-label="Email address for newsletter signup"
+          />
+          <button type="submit" class="newsletter-button">
+            Get Weekly Reports
+          </button>
+        </form>
+        
+        <p class="newsletter-privacy">
+          We respect your privacy. Unsubscribe at any time. No spam, just valuable insights.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schema.org WebSite markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GlowPicked",
+    "url": "https://glowpicked.com",
+    "description": "AI-Powered Reviews for Luxury Beauty & Skincare Products",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://glowpicked.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "GlowPicked",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://glowpicked.com/images/logo.png"
+      }
+    }
+  }
+  </script>
+</Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #FFE0E6 0%, #FFF5F7 100%);
+    padding: 4rem 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(233, 30, 99, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 107, 157, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-display);
+    color: var(--text);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: var(--font-display);
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--shadow);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .btn-secondary {
+    background: white;
+    color: var(--text);
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--border);
+    transition: border-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+  }
+
+  .hero-image {
+    position: relative;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hero-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--primary);
+    box-shadow: var(--shadow);
+  }
+
+  /* Trust Section */
+  .trust-section {
+    background: var(--primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .trust-text {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Featured Articles */
+  .featured-section {
+    padding: 4rem 0;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+    color: var(--text);
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .article-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .article-image {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .article-card:hover .article-image img {
+    transform: scale(1.05);
+  }
+
+  .article-category {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .article-rating {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .article-content {
+    padding: 1.5rem;
+  }
+
+  .article-title {
+    margin-bottom: 1rem;
+  }
+
+  .article-title a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    font-family: var(--font-display);
+  }
+
+  .article-title a:hover {
+    color: var(--primary);
+  }
+
+  .article-description {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .article-price {
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .article-read-time {
+    color: var(--text-light);
+  }
+
+  .article-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
+  .article-link:hover {
+    color: var(--primary-dark);
+  }
+
+  /* Categories Section */
+  .categories-section {
+    background: var(--bg-light);
+    padding: 4rem 0;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .category-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .category-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .category-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-display);
+  }
+
+  .category-description {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+
+  .category-count {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  /* Why Section */
+  .why-section {
+    padding: 4rem 0;
+  }
+
+  .why-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .why-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-family: var(--font-display);
+  }
+
+  .why-features {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .feature-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .feature-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .why-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Newsletter Section */
+  .newsletter-section {
+    background: linear-gradient(135deg, var(--text) 0%, #1A252F 100%);
+    color: white;
+    padding: 4rem 0;
+  }
+
+  .newsletter-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .newsletter-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+  }
+
+  .newsletter-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .newsletter-input:focus {
+    outline: none;
+    border-color: var(--secondary);
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .newsletter-button {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .newsletter-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .newsletter-privacy {
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-stats {
+      justify-content: center;
+    }
+
+    .why-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .categories-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .newsletter-form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .newsletter-input {
+      min-width: auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+
+  /* Accessibility and Focus States */
+  .btn-primary:focus,
+  .btn-secondary:focus,
+  .article-link:focus,
+  .category-card:focus,
+  .newsletter-input:focus,
+  .newsletter-button:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+  }
+</style>
