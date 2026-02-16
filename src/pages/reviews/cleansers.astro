@@ -108,14 +108,14 @@ const pageSchema = JSON.stringify({
 
 <Layout 
   title="Best Facial Cleansers 2026 | Top Budget & Luxury | GlowPicked"
-  description="Our AI analyzed 42K+ real customer reviews to find the top 3 budget and top 3 luxury best facial cleansers on Amazon."
+  description="We researched Amazon customer reviews to find the top 3 budget and top 3 luxury best facial cleansers on Amazon."
 >
   <section class="products-section">
     <div class="container">
       <div class="page-header">
         <h1>Best Facial Cleansers</h1>
         <p class="last-updated">📅 Last updated: February 2026</p>
-        <p class="lead-text">Our AI analyzed 42K+ real customer reviews to surface the top performers</p>
+        <p class="lead-text">We researched top-rated Amazon products and customer reviews to find the best picks</p>
       </div>
 
       <section class="budget-section">
@@ -126,7 +126,7 @@ const pageSchema = JSON.stringify({
               <h3 class="product-name">{product.name}</h3>
               <div class="product-meta">
                 <span class="rating">{product.rating}⭐</span>
-                <span class="reviews">Our AI analyzed {product.reviewCount.toLocaleString()}+ real customer reviews</span>
+                <span class="reviews">Based on {product.reviewCount.toLocaleString()}+ Amazon customer ratings</span>
               </div>
               <ul class="pros-list">
                 {product.pros.map((pro) => (
@@ -154,7 +154,7 @@ const pageSchema = JSON.stringify({
               <h3 class="product-name">{product.name}</h3>
               <div class="product-meta">
                 <span class="rating">{product.rating}⭐</span>
-                <span class="reviews">Our AI analyzed {product.reviewCount.toLocaleString()}+ real customer reviews</span>
+                <span class="reviews">Based on {product.reviewCount.toLocaleString()}+ Amazon customer ratings</span>
               </div>
               <ul class="pros-list">
                 {product.pros.map((pro) => (
@@ -178,12 +178,13 @@ const pageSchema = JSON.stringify({
 
   <section class="methodology-section">
     <div class="container">
-      <h2>Our AI Analysis Methodology</h2>
+      <h2>How We Pick Products</h2>
       <p>
-        Our AI processes thousands of Amazon customer reviews using advanced natural language processing (NLP). 
-        We extract sentiment on key attributes like efficacy, texture, absorption, value, and long-term results. 
-        Products are scored based on verified purchase reviews, weighted by recency and reviewer credibility. 
-        Only products with 1,500+ reviews qualify for top spots.
+        Our team uses AI tools to research popular Amazon products in each category.
+        We look at overall ratings, review volume, common praise and complaints, and value for money.
+        Products are selected based on consistent positive feedback from real customers.
+        We do not physically test products — our recommendations are based entirely on
+        published customer review data from Amazon.
       </p>
     </div>
   </section>
