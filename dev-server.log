@@ -14,3 +14,5 @@
 14:29:38 [200] HEAD / 4ms
 14:32:28 [200] / 5ms
 14:32:37 [200] /privacy-policy 2ms
+14:56:07 [watch] src/pages/index.astro
+14:57:28 [watch] src/components/CookieBanner.astro
