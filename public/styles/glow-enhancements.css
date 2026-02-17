@@ -114,13 +114,14 @@
   75% { background-position: 0% 100%; }
 }
 
+/* HOVER EFFECTS PLUS SUBTILS */
 .article-card:hover {
-  transform: translateY(-8px) scale(1.02) !important;
+  transform: translateY(-4px) scale(1.01) !important; /* Moins de mouvement */
   box-shadow: 
-    0 25px 50px rgba(233, 30, 99, 0.15),
-    0 15px 35px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(233, 30, 99, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+    0 12px 25px rgba(233, 30, 99, 0.1), /* Ombres plus douces */
+    0 8px 15px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(233, 30, 99, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 
 .article-image {
@@ -227,14 +228,14 @@
 }
 
 .category-card:hover {
-  transform: translateY(-6px) scale(1.03) !important;
+  transform: translateY(-3px) scale(1.01) !important; /* Plus subtil */
   box-shadow: 
-    0 20px 40px rgba(233, 30, 99, 0.15),
-    0 10px 25px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(233, 30, 99, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
-  background: linear-gradient(135deg, #fff 0%, #fce4ec 100%) !important;
-  border-color: rgba(233, 30, 99, 0.2) !important;
+    0 8px 20px rgba(233, 30, 99, 0.08), /* Ombres plus légères */
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(233, 30, 99, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  background: linear-gradient(135deg, #fff 0%, #fef7f8 100%) !important; /* Background plus subtil */
+  border-color: rgba(233, 30, 99, 0.15) !important;
 }
 
 .category-icon {
@@ -245,19 +246,13 @@
 }
 
 .category-card:hover .category-icon {
-  transform: scale(1.15) rotate(3deg);
-  filter: drop-shadow(0 8px 16px rgba(233, 30, 99, 0.3)) 
-          drop-shadow(0 0 20px rgba(233, 30, 99, 0.2))
-          brightness(1.1);
-  animation: iconBounce 0.6s ease;
+  transform: scale(1.08) rotate(1deg); /* Plus subtil */
+  filter: drop-shadow(0 4px 8px rgba(233, 30, 99, 0.15)) 
+          brightness(1.05); /* Moins d'effets */
+  /* Supprimer l'animation bounce qui peut être distrayante */
 }
 
-@keyframes iconBounce {
-  0% { transform: scale(1) rotate(0deg); }
-  30% { transform: scale(1.2) rotate(5deg); }
-  60% { transform: scale(1.1) rotate(-2deg); }
-  100% { transform: scale(1.15) rotate(3deg); }
-}
+/* Animation iconBounce supprimée - trop flashy */
 
 /* ========== BUTTONS GLOW ========== */
 
@@ -293,11 +288,11 @@
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px) !important;
+  transform: translateY(-2px) !important; /* Moins de mouvement */
   box-shadow: 
-    0 12px 30px rgba(233, 30, 99, 0.4),
-    0 0 20px rgba(233, 30, 99, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+    0 8px 20px rgba(233, 30, 99, 0.2), /* Ombres plus douces */
+    0 0 12px rgba(233, 30, 99, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
 }
 
 /* ========== TRUST SECTION GLOW ========== */
@@ -436,19 +431,52 @@
   }
 }
 
-/* ========== ACCESSIBILITY ENHANCEMENTS ========== */
+/* ========== ACCESSIBILITY ENHANCEMENTS - HIGHLIGHTING SUBTIL ========== */
 
 .glow-focus:focus {
-  outline: 3px solid rgba(233, 30, 99, 0.8) !important; /* Plus visible */
-  outline-offset: 4px;
-  box-shadow: 0 0 0 6px rgba(233, 30, 99, 0.3) !important;
-  background: rgba(255, 255, 255, 0.95) !important; /* Background contrasté */
+  outline: 2px solid rgba(233, 30, 99, 0.6) !important; /* Moins agressif */
+  outline-offset: 2px; /* Plus proche du texte */
+  box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1) !important; /* Plus subtil */
+  background: rgba(255, 255, 255, 0.9) !important; 
 }
 
-/* Force contraste minimum pour tous les liens */
+/* Sélection de texte plus douce */
+::selection {
+  background: rgba(233, 30, 99, 0.2) !important; /* Rose très léger */
+  color: #1a1a2e !important; /* Texte sombre pour contraste */
+}
+
+::-moz-selection {
+  background: rgba(233, 30, 99, 0.2) !important;
+  color: #1a1a2e !important;
+}
+
+/* LIENS PLUS SUBTILS */
 a, .nav-link, .article-link, .footer-section a {
   position: relative;
   z-index: 1;
+  transition: color 0.2s ease; /* Transitions douces */
+}
+
+/* Hover states plus subtils pour les liens */
+.nav-link:hover,
+.article-link:hover {
+  color: #c2185b !important; /* Couleur plus douce que #e91e63 */
+}
+
+/* Supprimer les underlines flashy au hover */
+.nav-link::after {
+  height: 1px !important; /* Plus fin que 2px */
+  opacity: 0.7; /* Plus subtil */
+}
+
+/* Focus states moins agressifs */
+.nav-link:focus,
+.article-link:focus,
+a:focus {
+  outline: 1px solid rgba(233, 30, 99, 0.5) !important;
+  outline-offset: 2px;
+  box-shadow: none !important; /* Supprimer les glow shadows */
 }
 
 /* Amélioration contraste text sur backgrounds colorés */
