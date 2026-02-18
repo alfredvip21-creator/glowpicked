@@ -76,6 +76,15 @@ const fullTitle = title.includes('GlowPicked') ? title : `${title} | GlowPicked`
     
     {noIndex && <meta name="robots" content="noindex, nofollow" />}
     
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W4SXSQGLCP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W4SXSQGLCP');
+    </script>
+    
     <title>{fullTitle}</title>
   </head>
   <body>
@@ -363,15 +372,50 @@ const fullTitle = title.includes('GlowPicked') ? title : `${title} | GlowPicked`
       /* Responsive Design */
       @media (max-width: 768px) {
         .nav-menu {
-          display: none;
+          position: fixed;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background: var(--bg);
+          box-shadow: var(--shadow-lg);
+          flex-direction: column;
+          padding: 2rem;
+          gap: 1.5rem;
+          transform: translateY(-100%);
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease;
+          z-index: 1000;
+        }
+
+        .nav-menu.active {
+          transform: translateY(0);
+          opacity: 1;
+          visibility: visible;
         }
 
         .nav-toggle {
           display: flex;
+          z-index: 1001;
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+          background: var(--primary);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+          opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+          background: var(--primary);
         }
 
         .nav-container {
           padding: 1rem;
+          position: relative;
         }
 
         .logo {

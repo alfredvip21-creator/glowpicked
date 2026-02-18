@@ -1,15 +1,15 @@
-functionsDirectory = "/Users/alfred/.openclaw/workspace/projects/affiliate-sites/site/netlify/functions"
+functionsDirectory = "/Users/alfred/.openclaw/workspace/projects/glowpicked/site/netlify/functions"
 functionsDirectoryOrigin = "default"
 plugins = []
 headers = []
 redirects = []
 
 [build]
-publish = "/Users/alfred/.openclaw/workspace/projects/affiliate-sites/site/dist"
+publish = "/Users/alfred/.openclaw/workspace/projects/glowpicked/site/dist"
 publishOrigin = "ui"
 commandOrigin = "ui"
 command = "npm run build"
-functions = "/Users/alfred/.openclaw/workspace/projects/affiliate-sites/site/netlify/functions"
+functions = "/Users/alfred/.openclaw/workspace/projects/glowpicked/site/netlify/functions"
 
 [build.environment]
 
