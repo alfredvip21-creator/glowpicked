@@ -1,0 +1,18 @@
+
+> glowpicked@1.0.0 dev
+> astro dev
+
+14:29:32 [WARN] [config] The adapter @astrojs/netlify provides experimental support for "assets". You may experience issues or breaking changes until this feature is fully supported by the adapter.
+14:29:32 [types] Generated 0ms
+
+ astro  v4.16.19 ready in 59 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+14:29:32 watching for file changes...
+14:29:38 [200] HEAD / 4ms
+14:32:28 [200] / 5ms
+14:32:37 [200] /privacy-policy 2ms
+14:56:07 [watch] src/pages/index.astro
+14:57:28 [watch] src/components/CookieBanner.astro

@@ -1,0 +1,375 @@
+/* GLOWPICKED - DESIGN FÉMININ ÉLÉGANT */
+/* Inspiration: Sephora, Glossier, Goop - Premium Subtile */
+
+/* ========== PALETTE COULEURS FÉMININES ========== */
+:root {
+  /* Roses sophistiqués */
+  --primary-rose: #D4587A; /* Rose premium, moins flashy que #e91e63 */
+  --primary-soft: #E8A4C0; /* Rose doux */
+  --primary-pale: #F5D7E3; /* Rose très pale */
+  
+  /* Neutres chaleureux */
+  --warm-white: #FEFBF8; /* Blanc chaud vs blanc froid */
+  --soft-cream: #F9F6F2; /* Crème douce */
+  --warm-grey: #8B7D7B; /* Gris chaud féminin */
+  --charcoal: #2F2B2A; /* Charcoal doux vs noir dur */
+  
+  /* Accents sophistiqués */
+  --gold-accent: #D4AF37; /* Or discret pour trust/premium */
+  --sage-green: #A8B5A0; /* Vert sage nature */
+  
+  /* Shadows féminines */
+  --shadow-soft: 0 4px 20px rgba(212, 88, 122, 0.08);
+  --shadow-elegant: 0 8px 32px rgba(212, 88, 122, 0.12);
+  --shadow-premium: 0 16px 48px rgba(212, 88, 122, 0.16);
+}
+
+/* ========== TYPOGRAPHY FÉMININE ÉLÉGANTE ========== */
+
+/* Headers élégants */
+.hero-title,
+.section-title {
+  font-family: 'Playfair Display', serif;
+  color: var(--charcoal);
+  font-weight: 600; /* Moins bold que 800 */
+  letter-spacing: -0.02em; /* Spacing délicat */
+  line-height: 1.2;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-rose), var(--primary-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Supprimer toutes animations flashy */
+}
+
+/* Body text sophistiqué */
+.hero-description,
+.article-description,
+.section-subtitle {
+  font-family: 'Inter', sans-serif;
+  color: var(--warm-grey);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* ========== CARDS ÉLÉGANTES FÉMININES ========== */
+
+.article-card,
+.category-card {
+  background: var(--warm-white);
+  border: 1px solid rgba(212, 88, 122, 0.1);
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hover subtil et féminin */
+.article-card:hover,
+.category-card:hover {
+  transform: translateY(-2px); /* Très subtil */
+  box-shadow: var(--shadow-elegant);
+  border-color: rgba(212, 88, 122, 0.15);
+}
+
+/* Pas de glow effects - juste élégance */
+.article-card:hover {
+  background: linear-gradient(135deg, var(--warm-white) 0%, var(--soft-cream) 100%);
+}
+
+/* ========== HERO SECTION SOPHISTIQUÉE ========== */
+
+.hero {
+  background: linear-gradient(135deg, 
+    var(--warm-white) 0%, 
+    var(--soft-cream) 50%, 
+    var(--primary-pale) 100%);
+  padding: 4rem 0;
+}
+
+/* Supprimer particules/animations - focus sur contenu */
+.hero::before {
+  display: none;
+}
+
+/* Stats élégantes */
+.stat-number {
+  color: var(--primary-rose);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.stat-label {
+  color: var(--warm-grey);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: none; /* Moins aggressive que uppercase */
+  letter-spacing: 0.02em;
+}
+
+/* ========== BOUTONS PREMIUM FÉMININS ========== */
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-rose), var(--primary-soft));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px); /* Très subtil */
+  box-shadow: var(--shadow-elegant);
+  background: linear-gradient(135deg, #C24B6B, var(--primary-rose)); /* Légèrement plus foncé */
+}
+
+.btn-secondary {
+  background: var(--warm-white);
+  color: var(--primary-rose);
+  border: 1.5px solid var(--primary-rose);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-pale);
+  transform: translateY(-1px);
+}
+
+/* ========== NAVIGATION ÉLÉGANTE ========== */
+
+.header {
+  background: rgba(254, 251, 248, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(212, 88, 122, 0.08);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+/* Supprimer l'étoile flashy */
+.logo::before {
+  display: none;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, var(--primary-rose), var(--primary-soft));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-link {
+  color: var(--charcoal);
+  font-weight: 450;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary-rose);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background: var(--primary-rose);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ========== CATEGORIES GRILLE FÉMININE ========== */
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.category-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  filter: grayscale(20%) brightness(1.1); /* Plus sophistiqué que couleurs vives */
+  transition: all 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.05); /* Très subtil */
+  filter: grayscale(0%) brightness(1.2);
+}
+
+.category-name {
+  color: var(--charcoal);
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-description {
+  color: var(--warm-grey);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.category-count {
+  color: var(--primary-rose);
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+/* ========== TRUST SIGNALS FÉMININS ========== */
+
+.trust-section {
+  background: linear-gradient(135deg, var(--soft-cream), var(--primary-pale));
+  padding: 2.5rem 0;
+}
+
+.trust-text {
+  color: var(--charcoal);
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 450;
+}
+
+/* ========== RATINGS & BADGES SOPHISTIQUÉS ========== */
+
+.article-rating {
+  background: rgba(212, 175, 55, 0.1); /* Or doux */
+  color: var(--charcoal);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.article-category {
+  background: var(--primary-rose);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ========== RESPONSIVE FÉMININ ========== */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .articles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ========== MICRO-INTERACTIONS DÉLICATES ========== */
+
+/* Sélection de texte sophistiquée */
+::selection {
+  background: var(--primary-pale);
+  color: var(--charcoal);
+}
+
+::-moz-selection {
+  background: var(--primary-pale);
+  color: var(--charcoal);
+}
+
+/* Focus states élégants */
+button:focus,
+a:focus,
+.nav-link:focus {
+  outline: 2px solid var(--primary-soft);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(212, 88, 122, 0.1);
+}
+
+/* Transitions douces partout */
+* {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ========== LOADING STATES ÉLÉGANTS ========== */
+
+.fade-in {
+  animation: elegantFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes elegantFadeIn {
+  0% { 
+    opacity: 0; 
+    transform: translateY(10px);
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0);
+  }
+}
+
+/* ========== ACCESSIBILITÉ AMÉLIORÉE ========== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mode sombre sophistiqué */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --warm-white: #1F1B1A;
+    --soft-cream: #2A2522;
+    --charcoal: #F5D7E3;
+    --warm-grey: #C4B8B6;
+  }
+}

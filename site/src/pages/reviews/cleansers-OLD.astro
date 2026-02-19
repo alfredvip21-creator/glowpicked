@@ -1,0 +1,310 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const products = {
+  "budget": [
+    {
+      "name": "CeraVe Hydrating Facial Cleanser",
+      "asin": "B01MSSDEPK",
+      "rating": 4.7,
+      "reviewCount": 111000,
+      "pros": [
+        "Ceramides protect skin barrier",
+        "Non-foaming, gentle formula",
+        "Perfect for dry and sensitive skin"
+      ],
+      "con": "Doesn't remove heavy makeup well"
+    },
+    {
+      "name": "La Roche-Posay Toleriane Purifying Foaming Cleanser",
+      "asin": "B01N34XW93",
+      "rating": 4.6,
+      "reviewCount": 47000,
+      "pros": [
+        "Niacinamide controls oil",
+        "Removes makeup effectively",
+        "Safe for sensitive, acne-prone skin"
+      ],
+      "con": "Can feel slightly drying"
+    },
+    {
+      "name": "PanOxyl Acne Foaming Wash 10% Benzoyl Peroxide",
+      "asin": "B081KL2QYJ",
+      "rating": 4.5,
+      "reviewCount": 42000,
+      "pros": [
+        "10% benzoyl peroxide fights acne",
+        "Works on face and body",
+        "Dermatologist recommended"
+      ],
+      "con": "Can bleach towels and fabrics"
+    }
+  ],
+  "luxury": [
+    {
+      "name": "Youth To The People Superfood Cleanser",
+      "asin": "B018A0BO92",
+      "rating": 4.6,
+      "reviewCount": 8000,
+      "pros": [
+        "Kale, spinach and green tea antioxidants",
+        "pH-balanced gel formula",
+        "Removes makeup without stripping"
+      ],
+      "con": "Pump can malfunction"
+    },
+    {
+      "name": "Glow Recipe Avocado Ceramide Cleanser",
+      "asin": "B0CBT1NMVL",
+      "rating": 4.5,
+      "reviewCount": 2100,
+      "pros": [
+        "Avocado and ceramides repair barrier",
+        "Gel-to-foam satisfying texture",
+        "Hyaluronic acid hydrates while cleansing"
+      ],
+      "con": "New product, fewer long-term reviews"
+    },
+    {
+      "name": "Drunk Elephant Beste No. 9 Jelly Cleanser",
+      "asin": "B076639783",
+      "rating": 4.4,
+      "reviewCount": 3000,
+      "pros": [
+        "Removes all makeup in one step",
+        "Glycerin-based, ultra-gentle",
+        "No essential oils or fragrance"
+      ],
+      "con": "Premium price for a cleanser"
+    }
+  ]
+};
+
+
+// Find top pick in each tier (highest rating)
+const budgetTopIdx = products.budget.reduce((best, p, i) => p.rating > products.budget[best].rating ? i : best, 0);
+const luxuryTopIdx = products.luxury.reduce((best, p, i) => p.rating > products.luxury[best].rating ? i : best, 0);
+
+const schemaItems = [...products.budget, ...products.luxury].map((p, i) => ({
+  "@type": "ListItem",
+  "position": i + 1,
+  "item": {
+    "@type": "Product",
+    "name": p.name,
+    "url": `https://www.amazon.com/dp/${p.asin}/ref=nosim?tag=glowpicked0c-20`,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": p.rating,
+      "bestRating": 5,
+      "reviewCount": p.reviewCount
+    }
+  }
+}));
+
+const pageSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": `Best Cleansers 2026 - Budget & Luxury Picks`,
+  "description": `AI-analyzed reviews for top cleansers on Amazon`,
+  "numberOfItems": 6,
+  "itemListElement": schemaItems
+});
+---
+
+<Layout 
+  title="Best Facial Cleansers 2026 | Top Budget & Luxury | GlowPicked"
+  description="We researched Amazon customer reviews to find the top 3 budget and top 3 luxury best facial cleansers on Amazon."
+>
+  <section class="products-section">
+    <div class="container">
+      <div class="page-header">
+        <h1>Best Facial Cleansers</h1>
+        <p class="last-updated">📅 Last updated: February 2026</p>
+        <p class="lead-text">We researched top-rated Amazon products and customer reviews to find the best picks</p>
+      </div>
+
+      <section class="budget-section">
+        <h2><span class="accent-budget">🏆 Top 3 Budget</span> (Under $20)</h2>
+        <div class="products-grid">
+          {products.budget.map((product, index) => (
+            <div class="product-card" data-asin={product.asin}>
+              {index === budgetTopIdx && <div class="top-pick-badge">🏅 Our Top Pick</div>}
+              <h3 class="product-name">{product.name}</h3>
+              <div class="product-meta">
+                <span class="rating">{product.rating}⭐</span>
+                <span class="reviews">Based on {product.reviewCount.toLocaleString()}+ Amazon customer ratings</span>
+              </div>
+              <ul class="pros-list">
+                {product.pros.map((pro) => (
+                  <li>✅ {pro}</li>
+                ))}
+              </ul>
+              <div class="con">
+                ❌ {product.con}
+              </div>
+              <div class="cta-wrapper">
+                <a href={`https://www.amazon.com/dp/${product.asin}/ref=nosim?tag=glowpicked0c-20`} class="cta-button" target="_blank" rel="nofollow sponsored">
+                  Check Price on Amazon
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="luxury-section">
+        <h2><span class="accent-luxury">💎 Top 3 Luxury</span></h2>
+        <div class="products-grid">
+          {products.luxury.map((product, index) => (
+            <div class="product-card" data-asin={product.asin}>
+              {index === luxuryTopIdx && <div class="top-pick-badge">🏅 Our Top Pick</div>}
+              <h3 class="product-name">{product.name}</h3>
+              <div class="product-meta">
+                <span class="rating">{product.rating}⭐</span>
+                <span class="reviews">Based on {product.reviewCount.toLocaleString()}+ Amazon customer ratings</span>
+              </div>
+              <ul class="pros-list">
+                {product.pros.map((pro) => (
+                  <li>✅ {pro}</li>
+                ))}
+              </ul>
+              <div class="con">
+                ❌ {product.con}
+              </div>
+              <div class="cta-wrapper">
+                <a href={`https://www.amazon.com/dp/${product.asin}/ref=nosim?tag=glowpicked0c-20`} class="cta-button" target="_blank" rel="nofollow sponsored">
+                  Check Price on Amazon
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="methodology-section">
+    <div class="container">
+      <h2>How We Pick Products</h2>
+      <p>
+        Our team uses AI tools to research popular Amazon products in each category.
+        We look at overall ratings, review volume, common praise and complaints, and value for money.
+        Products are selected based on consistent positive feedback from real customers.
+        We do not physically test products — our recommendations are based entirely on
+        published customer review data from Amazon.
+      </p>
+    </div>
+  </section>
+
+  
+  
+  <section class="buying-guide">
+    <div class="container">
+      <h2>Buying Guide</h2>
+      <p class="guide-intro">A good cleanser removes dirt, makeup, and excess oil without stripping your skin's natural barrier. It's the foundation of every skincare routine — get this wrong and everything else suffers.</p>
+      <h3>Quick Tips</h3>
+      <ul class="guide-tips">
+            <li>💡 Double cleansing (oil cleanser + water cleanser) is the gold standard for makeup removal</li>
+            <li>💡 Foaming cleansers work best for oily skin; cream cleansers suit dry skin</li>
+            <li>💡 Your skin shouldn't feel tight after cleansing — if it does, your cleanser is too harsh</li>
+            <li>💡 Micellar water is great for sensitive skin but shouldn't replace a proper cleanser</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="related-section">
+    <div class="container">
+      <h2>Continue Your Routine</h2>
+      <div class="related-grid">
+          <a href="/reviews/face-masks" class="related-card">
+            <h3>Face Masks</h3>
+            <p>Follow your cleanse with a weekly mask</p>
+            <span class="related-arrow">→</span>
+          </a>
+          <a href="/reviews/serums" class="related-card">
+            <h3>Serums</h3>
+            <p>Apply serums on freshly cleansed skin</p>
+            <span class="related-arrow">→</span>
+          </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="disclaimer-section">
+    <div class="container">
+      <p>
+        <strong>Health Disclaimer:</strong> This content is for informational purposes only and is not medical advice. Consult a dermatologist for personalized recommendations.
+      </p>
+      <p class="affiliate-disclosure">
+        As an Amazon Associate I earn from qualifying purchases.
+      </p>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={pageSchema} />
+</Layout>
+
+<style>
+  :root {
+    --green-budget: #28a745;
+    --purple-luxury: #6f42c1;
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  @media (max-width: 768px) { .container { padding: 0 1rem; } }
+  .page-header { text-align: center; margin-bottom: 3rem; }
+  .page-header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; font-family: 'Playfair Display', serif; }
+  .lead-text { font-size: 1.3rem; color: var(--text-light); }
+  .budget-section, .luxury-section { margin-bottom: 4rem; }
+  .budget-section h2, .luxury-section h2 { color: var(--text); font-size: 2rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif; }
+  .accent-budget { color: var(--green-budget); }
+  .accent-luxury { color: var(--purple-luxury); }
+  .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+  @media (max-width: 768px) { .products-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+  .product-card { background: white; border-radius: var(--border-radius); box-shadow: var(--shadow); padding: 2rem; transition: all 0.3s ease; }
+  .product-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+  .product-name { font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: var(--text); font-family: 'Playfair Display', serif; }
+  .product-meta { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+  .rating { font-size: 1.2rem; font-weight: 700; color: #ffc107; }
+  .reviews { color: var(--text-light); font-size: 0.95rem; }
+  .pros-list { list-style: none; margin-bottom: 1.5rem; }
+  .pros-list li { margin-bottom: 0.5rem; color: var(--text); font-size: 1rem; }
+  .con { background: #f8f9fa; padding: 1rem; border-left: 4px solid #dc3545; margin-bottom: 1.5rem; color: var(--text); border-radius: 0 8px 8px 0; }
+  .cta-wrapper { text-align: center; margin-top: 1rem; }
+  .cta-button { display: inline-block; background: linear-gradient(135deg, #e91e63, #c2185b); color: white; text-decoration: none; padding: 0.6rem 1.5rem; text-align: center; font-weight: 600; font-size: 0.9rem; border-radius: 50px; transition: all 0.2s ease; }
+  .cta-button:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  .methodology-section { background: var(--bg-light); padding: 4rem 0; }
+  .methodology-section h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif; }
+  .methodology-section p { max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7; color: var(--text); }
+  .disclaimer-section { padding: 3rem 0; background: #f8f9fa; }
+  .disclaimer-section p { text-align: center; max-width: 800px; margin: 0 auto 1rem; color: var(--text-light); font-size: 0.95rem; }
+  .affiliate-disclosure { font-size: 0.9rem; background: rgba(233, 30, 99, 0.1); padding: 1rem; border-radius: var(--border-radius); border-left: 4px solid var(--primary); }
+  .last-updated { text-align: center; color: #888; font-size: 0.9rem; margin-top: -0.5rem; margin-bottom: 2rem; }
+
+  .related-section { padding: 3rem 0; background: #fafafa; }
+  .related-section h2 { text-align: center; font-size: 1.8rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif; }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+  .related-card { background: white; padding: 1.5rem; border-radius: 12px; text-decoration: none; color: var(--text); box-shadow: 0 2px 10px rgba(0,0,0,0.06); transition: all 0.2s; display: flex; flex-direction: column; }
+  .related-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(233,30,99,0.12); }
+  .related-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; color: #e91e63; }
+  .related-card p { color: #666; font-size: 0.95rem; flex: 1; }
+  .related-arrow { color: #e91e63; font-size: 1.3rem; font-weight: 700; }
+
+  .buying-guide { padding: 3rem 0; }
+  .buying-guide h2 { text-align: center; font-size: 1.8rem; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; }
+  .buying-guide h3 { font-size: 1.3rem; margin: 1.5rem 0 1rem; color: var(--text); }
+  .guide-intro { max-width: 800px; margin: 0 auto 1.5rem; font-size: 1.1rem; line-height: 1.7; color: #555; text-align: center; }
+  .guide-tips { list-style: none; max-width: 800px; margin: 0 auto; }
+  .guide-tips li { padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; font-size: 1rem; line-height: 1.5; color: var(--text); }
+
+  .top-pick-badge {
+    background: linear-gradient(135deg, #ff6f00, #ff8f00);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 8px rgba(255,111,0,0.3);
+    letter-spacing: 0.02em;
+  }
+</style>

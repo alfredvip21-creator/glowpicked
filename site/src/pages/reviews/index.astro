@@ -1,0 +1,164 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Skincare Reviews Hub | GlowPicked - AI Review Aggregator"
+  description="Discover top budget and luxury picks in every skincare category. We research Amazon customer reviews to find products that actually work."
+  keywords="skincare reviews, best face moisturizers, serums, sunscreen, AI beauty reviews"
+>
+  <section class="reviews-hub-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Skincare Reviews Hub
+        </h1>
+        <p class="hero-description">
+          We research Amazon customer reviews to bring you the top 3 budget and top 3 luxury products in each category. 
+          Honest recommendations based on real customer feedback.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories-section">
+    <div class="container">
+      <div class="categories-grid">
+        <a href="/reviews/face-moisturizers" class="category-card" aria-label="Face Moisturizers Reviews">
+          <div class="category-icon">💧</div>
+          <h3 class="category-name">Face Moisturizers</h3>
+          <p class="category-desc">Deep hydration for every skin type</p>
+        </a>
+        <a href="/reviews/serums" class="category-card" aria-label="Serums Reviews">
+          <div class="category-icon">🧪</div>
+          <h3 class="category-name">Serums</h3>
+          <p class="category-desc">Potent targeted treatments</p>
+        </a>
+        <a href="/reviews/sunscreen" class="category-card" aria-label="Sunscreen Reviews">
+          <div class="category-icon">☀️</div>
+          <h3 class="category-name">Sunscreen</h3>
+          <p class="category-desc">No-white-cast protection</p>
+        </a>
+        <a href="/reviews/eye-creams" class="category-card" aria-label="Eye Creams Reviews">
+          <div class="category-icon">👁️</div>
+          <h3 class="category-name">Eye Creams</h3>
+          <p class="category-desc">Brighten & depuff</p>
+        </a>
+        <a href="/reviews/cleansers" class="category-card" aria-label="Cleansers Reviews">
+          <div class="category-icon">🧼</div>
+          <h3 class="category-name">Cleansers</h3>
+          <p class="category-desc">Gentle deep clean</p>
+        </a>
+        <a href="/reviews/face-masks" class="category-card" aria-label="Face Masks Reviews">
+          <div class="category-icon">🎭</div>
+          <h3 class="category-name">Face Masks</h3>
+          <p class="category-desc">Instant glow treatments</p>
+        </a>
+        <a href="/reviews/retinol-anti-aging" class="category-card" aria-label="Retinol Anti-Aging Reviews">
+          <div class="category-icon">⏳</div>
+          <h3 class="category-name">Retinol & Anti-Aging</h3>
+          <p class="category-desc">Science-backed wrinkle fighters</p>
+        </a>
+        <a href="/reviews/lip-care" class="category-card" aria-label="Lip Care Reviews">
+          <div class="category-icon">💋</div>
+          <h3 class="category-name">Lip Care</h3>
+          <p class="category-desc">Plump & protect</p>
+        </a>
+        <a href="/reviews/body-care" class="category-card" aria-label="Body Care Reviews">
+          <div class="category-icon">🧴</div>
+          <h3 class="category-name">Body Care</h3>
+          <p class="category-desc">Silky smooth skin</p>
+        </a>
+        <a href="/reviews/skincare-tools" class="category-card" aria-label="Skincare Tools Reviews">
+          <div class="category-icon">🛠️</div>
+          <h3 class="category-name">Skincare Tools</h3>
+          <p class="category-desc">Next-level devices</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .reviews-hub-hero {
+    background: linear-gradient(135deg, #FFE0E6 0%, #FFF5F7 100%);
+    padding: 4rem 0 2rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--text);
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .categories-section {
+    padding: 2rem 0 4rem;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .category-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2.5rem 2rem;
+    text-decoration: none;
+    color: var(--text);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .category-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .category-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .category-desc {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .categories-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .category-card {
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>

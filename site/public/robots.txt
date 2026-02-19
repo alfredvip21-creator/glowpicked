@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://glowpicked.com/sitemap.xml
+
+Crawl-delay: 1
+
+Disallow: /admin/
+Disallow: /.netlify/

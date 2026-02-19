@@ -1,0 +1,396 @@
+/* GLOW ENHANCEMENTS - GlowPicked Brillant Effects */
+
+/* ========== HERO SECTION BRILLANT ========== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e91e63' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3Ccircle cx='10' cy='10' r='0.5'/%3E%3Ccircle cx='50' cy='20' r='0.8'/%3E%3Ccircle cx='20' cy='50' r='1.2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  animation: sparkleFloat 25s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes sparkleFloat {
+  0% { transform: translateY(0px) rotate(0deg) scale(1); opacity: 0.3; }
+  25% { opacity: 0.8; }
+  50% { transform: translateY(-30px) rotate(180deg) scale(1.1); opacity: 0.4; }
+  75% { opacity: 0.9; }
+  100% { transform: translateY(-60px) rotate(360deg) scale(1); opacity: 0.2; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* TITRE GRADIENT ANIMÉ */
+.gradient-text {
+  background: linear-gradient(45deg, #e91e63, #9c27b0, #ff6b9d, #e91e63);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientGlow 4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 15px rgba(233, 30, 99, 0.3));
+  position: relative;
+}
+
+@keyframes gradientGlow {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+.gradient-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: blur(8px) brightness(1.4);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+/* ========== CARDS GLASS EFFECT ========== */
+
+.article-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(233, 30, 99, 0.15) !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.article-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(233, 30, 99, 0.1), 
+    rgba(156, 39, 176, 0.1), 
+    rgba(255, 107, 157, 0.1),
+    rgba(233, 30, 99, 0.1));
+  background-size: 300% 300%;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: borderFloat 8s ease-in-out infinite;
+}
+
+.article-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes borderFloat {
+  0%, 100% { background-position: 0% 50%; transform: rotate(0deg); }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; transform: rotate(1deg); }
+  75% { background-position: 0% 100%; }
+}
+
+.article-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 
+    0 25px 50px rgba(233, 30, 99, 0.15),
+    0 15px 35px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(233, 30, 99, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.article-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.article-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent);
+  transition: left 0.6s ease;
+}
+
+.article-card:hover .article-image::after {
+  left: 100%;
+}
+
+/* ========== NAVIGATION BRILLANTE ========== */
+
+.logo {
+  position: relative;
+}
+
+.logo::before {
+  content: '✨';
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  font-size: 1rem;
+  animation: twinkle 3s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes twinkle {
+  0% { 
+    opacity: 0.6; 
+    transform: scale(0.8) rotate(0deg); 
+    filter: brightness(1); 
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) rotate(180deg);
+    filter: brightness(1.4) drop-shadow(0 0 8px rgba(233, 30, 99, 0.6));
+  }
+  100% { 
+    opacity: 0.8; 
+    transform: scale(0.9) rotate(360deg); 
+    filter: brightness(1.2); 
+  }
+}
+
+.logo-text {
+  position: relative;
+}
+
+.logo-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: blur(3px) brightness(1.3);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* ========== CATEGORIES GLOW EFFECTS ========== */
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(233, 30, 99, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+  z-index: 0;
+}
+
+.category-card:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+.category-card:hover {
+  transform: translateY(-6px) scale(1.03) !important;
+  box-shadow: 
+    0 20px 40px rgba(233, 30, 99, 0.15),
+    0 10px 25px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(233, 30, 99, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  background: linear-gradient(135deg, #fff 0%, #fce4ec 100%) !important;
+  border-color: rgba(233, 30, 99, 0.2) !important;
+}
+
+.category-icon {
+  filter: drop-shadow(0 4px 8px rgba(233, 30, 99, 0.2));
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  z-index: 1;
+}
+
+.category-card:hover .category-icon {
+  transform: scale(1.15) rotate(3deg);
+  filter: drop-shadow(0 8px 16px rgba(233, 30, 99, 0.3)) 
+          drop-shadow(0 0 20px rgba(233, 30, 99, 0.2))
+          brightness(1.1);
+  animation: iconBounce 0.6s ease;
+}
+
+@keyframes iconBounce {
+  0% { transform: scale(1) rotate(0deg); }
+  30% { transform: scale(1.2) rotate(5deg); }
+  60% { transform: scale(1.1) rotate(-2deg); }
+  100% { transform: scale(1.15) rotate(3deg); }
+}
+
+/* ========== BUTTONS GLOW ========== */
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e91e63, #c2185b, #e91e63) !important;
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease-in-out infinite;
+  box-shadow: 
+    0 4px 15px rgba(233, 30, 99, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 
+    0 12px 30px rgba(233, 30, 99, 0.4),
+    0 0 20px rgba(233, 30, 99, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ========== TRUST SECTION GLOW ========== */
+
+.trust-section {
+  position: relative;
+}
+
+.trust-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(233, 30, 99, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(156, 39, 176, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  animation: trustGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes trustGlow {
+  0% { opacity: 0.5; }
+  100% { opacity: 0.8; }
+}
+
+/* ========== RESPONSIVE OPTIMIZATIONS ========== */
+
+@media (max-width: 768px) {
+  .hero::before {
+    animation-duration: 30s; /* Slower on mobile for battery */
+  }
+  
+  .gradient-text::after {
+    display: none; /* Remove glow layer on mobile */
+  }
+  
+  .category-card:hover {
+    transform: translateY(-3px) scale(1.01) !important;
+  }
+  
+  .logo::before {
+    display: none; /* Remove twinkle on mobile */
+  }
+}
+
+/* ========== PERFORMANCE OPTIMIZATIONS ========== */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .gradient-text,
+  .logo::before,
+  .btn-primary,
+  .trust-section::before {
+    animation: none !important;
+  }
+  
+  .article-card::before,
+  .category-card::before {
+    display: none;
+  }
+}
+
+/* ========== DARK MODE SUPPORT ========== */
+
+@media (prefers-color-scheme: dark) {
+  .article-card {
+    background: rgba(26, 26, 46, 0.95) !important;
+    border-color: rgba(233, 30, 99, 0.3) !important;
+  }
+  
+  .category-card:hover {
+    background: linear-gradient(135deg, #2a2a4a 0%, #3a3a5a 100%) !important;
+  }
+}
+
+/* ========== ACCESSIBILITY ENHANCEMENTS ========== */
+
+.glow-focus:focus {
+  outline: 3px solid rgba(233, 30, 99, 0.6);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(233, 30, 99, 0.2);
+}
+
+/* ========== LOADING ANIMATIONS ========== */
+
+.glow-fade-in {
+  animation: glowFadeIn 1s ease-out forwards;
+}
+
+@keyframes glowFadeIn {
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px) scale(0.98);
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1);
+  }
+}
