@@ -1,0 +1,138 @@
+{
+  "lastUpdated": "2026-02-16",
+  "note": "All ASINs verified via Amazon web search. SkinCeuticals CE Ferulic and Dr. Jart+ Ceramidin Mask not reliably on Amazon — substituted.",
+  "categories": {
+    "face-moisturizers": {
+      "budget": [
+        {"name": "CeraVe Moisturizing Cream", "asin": "B00TTD9BRC"},
+        {"name": "Neutrogena Hydro Boost Water Gel", "asin": "B00NR1YQHM"},
+        {"name": "Embryolisse Lait-Crème Concentré", "asin": "B004KELK4C"}
+      ],
+      "luxury": [
+        {"name": "Tatcha The Water Cream", "asin": "B072NNC2LR"},
+        {"name": "Tatcha The Dewy Skin Cream", "asin": "B09QBB8ZL4"},
+        {"name": "Olay Regenerist Micro-Sculpting Cream", "asin": "B007SR3A8S"}
+      ]
+    },
+    "serums": {
+      "budget": [
+        {"name": "CeraVe Vitamin C Serum", "asin": "B07PNCCLD2"},
+        {"name": "The Ordinary Hyaluronic Acid 2% + B5", "asin": "B01MYEZPC8"},
+        {"name": "La Roche-Posay Pure Vitamin C Serum", "asin": "B07PM79MSC"}
+      ],
+      "luxury": [
+        {"name": "RoC Retinol Correxion Deep Wrinkle Serum", "asin": "B00387F42G"},
+        {"name": "Olay Regenerist Retinol Serum", "asin": "B07XQBY5QQ"},
+        {"name": "Augustinus Bader The Retinol Serum", "asin": "B07FCD5QZC"}
+      ]
+    },
+    "sunscreen": {
+      "budget": [
+        {"name": "CeraVe 100% Mineral Sunscreen SPF 30", "asin": "B07KL5K96X"},
+        {"name": "Neutrogena Ultra Sheer Dry-Touch SPF 55", "asin": "B000EPA4GQ"},
+        {"name": "Banana Boat Sport Ultra SPF 50 Spray", "asin": "B01MQXX9US"}
+      ],
+      "luxury": [
+        {"name": "Supergoop! Unseen Sunscreen SPF 40", "asin": "B08CFVM1TT"},
+        {"name": "Blue Lizard Sensitive Mineral SPF 50+", "asin": "B0862Q6BV9"},
+        {"name": "La Roche-Posay Toleriane Double Repair Moisturizer UV SPF 30", "asin": "B07PM79MSC"}
+      ]
+    },
+    "eye-creams": {
+      "budget": [
+        {"name": "LilyAna Naturals Eye Cream", "asin": "B00LV6VDG2"},
+        {"name": "RoC Retinol Correxion Under Eye Cream", "asin": "B0009RFB76"},
+        {"name": "CeraVe Eye Repair Cream", "asin": "B01ET24GI4"}
+      ],
+      "luxury": [
+        {"name": "Neutrogena Rapid Wrinkle Repair Eye Cream", "asin": "B00P4VLE50"},
+        {"name": "Sunday Riley Auto Correct Eye Cream", "asin": "B07B8DZN6B"},
+        {"name": "Brickell Men's Restoring Eye Cream", "asin": "B00QL67MY4"}
+      ]
+    },
+    "cleansers": {
+      "budget": [
+        {"name": "CeraVe Hydrating Facial Cleanser", "asin": "B01MSSDEPK"},
+        {"name": "La Roche-Posay Toleriane Purifying Foaming Cleanser", "asin": "B01N34XW93"},
+        {"name": "PanOxyl Acne Foaming Wash 10% Benzoyl Peroxide", "asin": "B081KL2QYJ"}
+      ],
+      "luxury": [
+        {"name": "Youth To The People Superfood Cleanser", "asin": "B018A0BO92"},
+        {"name": "Cetaphil Daily Facial Cleanser", "asin": "B00NP936A8"},
+        {"name": "Drunk Elephant Beste No. 9 Jelly Cleanser", "asin": "B076639783"}
+      ]
+    },
+    "face-masks": {
+      "budget": [
+        {"name": "BIODANCE Bio-Collagen Real Deep Mask", "asin": "B0B2RM68G2"},
+        {"name": "Mediheal Tea Tree Essential Mask", "asin": "B0BLGYF23V"},
+        {"name": "COSRX Ultimate Nourishing Rice Overnight Spa Mask", "asin": "B01N13W31F"}
+      ],
+      "luxury": [
+        {"name": "Laneige Water Sleeping Mask", "asin": "B09HN8JBFP"},
+        {"name": "Tatcha Dewy Skin Cream", "asin": "B09QBB8ZL4"},
+        {"name": "Sunday Riley Good Genes Lactic Acid Treatment", "asin": "B0037LRZHA"}
+      ]
+    },
+    "retinol-anti-aging": {
+      "budget": [
+        {"name": "RoC Retinol Correxion Deep Wrinkle Night Cream", "asin": "B00027DMI8"},
+        {"name": "The Ordinary Retinol 1% in Squalane", "asin": "B0779YGB2G"},
+        {"name": "Olay Regenerist Retinol 24 Night Moisturizer", "asin": "B07XQBY5QQ"}
+      ],
+      "luxury": [
+        {"name": "SkinCeuticals Retinol 0.5 Refining Night Cream", "asin": "B0084Y59VO"},
+        {"name": "Augustinus Bader The Retinol Serum", "asin": "B07FCD5QZC"},
+        {"name": "No7 Protect & Perfect Intense Advanced Serum", "asin": "B00NVK5Z4I"}
+      ]
+    },
+    "lip-care": {
+      "budget": [
+        {"name": "Aquaphor Lip Repair Ointment", "asin": "B004FHZKOA"},
+        {"name": "Burt's Bees Beeswax Lip Balm (4-Pack)", "asin": "B0054LHI5A"},
+        {"name": "eos Natural Shea Lip Balm", "asin": "B0B2TKJVDH"}
+      ],
+      "luxury": [
+        {"name": "Laneige Lip Sleeping Mask Berry", "asin": "B07XXPHQZK"},
+        {"name": "Burt's Bees Tinted Lip Balm", "asin": "B00VK5SERU"},
+        {"name": "ChapStick Total Hydration", "asin": "B01N6GZ6IL"}
+      ]
+    },
+    "body-care": {
+      "budget": [
+        {"name": "NIVEA Essentially Enriched Body Lotion", "asin": "B00DG8F04Y"},
+        {"name": "eos Shea Better Body Lotion Vanilla Cashmere", "asin": "B08KT2Z93D"},
+        {"name": "Bio-Oil Skincare Oil", "asin": "B004AI97MA"}
+      ],
+      "luxury": [
+        {"name": "Palmer's Coconut Oil Formula Body Lotion", "asin": "B07FKXN23D"},
+        {"name": "Jergens Ultra Healing Extra Dry Skin Moisturizer", "asin": "B000GCQ02Q"},
+        {"name": "Tatcha The Dewy Skin Cream", "asin": "B09QBB8ZL4"}
+      ]
+    },
+    "skincare-tools": {
+      "budget": [
+        {"name": "Medicube Jelly Brush", "asin": "B0D1XLXSSY"},
+        {"name": "FOREO Luna Mini 3", "asin": "B082965B6F"},
+        {"name": "Clarisonic Mia Smart Face Brush", "asin": "B077QXBP2N"}
+      ],
+      "luxury": [
+        {"name": "Medicube Age-R Booster Pro", "asin": "B0CWK6YQ7V"},
+        {"name": "Olay Regenerist Facial Cleansing Device", "asin": "B00NWG9Q2M"},
+        {"name": "Neutrogena Light Therapy Acne Treatment Face Mask", "asin": "B01MUG8NFR"}
+      ]
+    },
+    "exfoliants-peels": {
+      "budget": [
+        {"name": "Paula's Choice 2% BHA Liquid Exfoliant", "asin": "B00949CTQQ"},
+        {"name": "The Ordinary AHA 30% + BHA 2% Peeling Solution", "asin": "B071D4D5DT"},
+        {"name": "COSRX BHA Blackhead Power Liquid", "asin": "B00OZEJ8R8"}
+      ],
+      "luxury": [
+        {"name": "Dr. Dennis Gross Alpha Beta Universal Daily Peel", "asin": "B074JCCQC6"},
+        {"name": "Sunday Riley Good Genes Lactic Acid Treatment", "asin": "B0037LRZHA"},
+        {"name": "St. Ives Fresh Skin Apricot Scrub", "asin": "B000052YDS"}
+      ]
+    }
+  }
+}
