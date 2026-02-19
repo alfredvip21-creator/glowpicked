@@ -1,1 +1,286 @@
-{"B00TTD9BRC": {"reviews": 142000, "rating": 4.7}, "B00NR1YQHM": {"reviews": 92000, "rating": 4.6}, "B004KELK4C": {"reviews": 29000, "rating": 4.6}, "B072NNC2LR": {"reviews": 4000, "rating": 4.7}, "B09QBB8ZL4": {"reviews": 5000, "rating": 4.6}, "B07PNCCLD2": {"reviews": 43000, "rating": 4.5}, "B01MYEZPC8": {"reviews": 32000, "rating": 4.7}, "B00387F42G": {"reviews": 31000, "rating": 4.3}, "B07KL5K96X": {"reviews": 9000, "rating": 4.2}, "B000EPA4GQ": {"reviews": 36000, "rating": 4.6}, "B08CFVM1TT": {"reviews": 19000, "rating": 4.6}, "B0862Q6BV9": {"reviews": 18000, "rating": 4.6}, "B00LV6VDG2": {"reviews": 36000, "rating": 4.0}, "B0009RFB76": {"reviews": 42000, "rating": 4.3}, "B01MSSDEPK": {"reviews": 111000, "rating": 4.7}, "B081KL2QYJ": {"reviews": 42000, "rating": 4.6}, "B018A0BO92": {"reviews": 8000, "rating": 4.6}, "B007SR3A8S": {"reviews": 15000, "rating": 4.5}, "B07XQBY5QQ": {"reviews": 15000, "rating": 4.6}, "B01MQXX9US": {"reviews": 21000, "rating": 4.7}, "B00P4VLE50": {"reviews": 12000, "rating": 4.2}, "B07B8DZN6B": {"reviews": 1000, "rating": 4.3}, "B00QL67MY4": {"reviews": 7000, "rating": 4.3}, "B01N34XW93": {"reviews": 47000, "rating": 4.7}, "B00NP936A8": {"reviews": 8000, "rating": 4.4}, "B076639783": {"reviews": 3000, "rating": 4.7}, "B0B2RM68G2": {"reviews": 36000, "rating": 4.5}, "B0BLGYF23V": {"reviews": 6000, "rating": 4.7}, "B01N13W31F": {"reviews": 9000, "rating": 4.5}, "B0037LRZHA": {"reviews": 3000, "rating": 4.6}, "B00027DMI8": {"reviews": 30000, "rating": 4.4}, "B0779YGB2G": {"reviews": 15000, "rating": 4.6}, "B00NVK5Z4I": {"reviews": 8000, "rating": 4.4}, "B004FHZKOA": {"reviews": 44000, "rating": 4.7}, "B0054LHI5A": {"reviews": 69000, "rating": 4.8}, "B0B2TKJVDH": {"reviews": 7000, "rating": 4.7}, "B07XXPHQZK": {"reviews": 54000, "rating": 4.6}, "B00VK5SERU": {"reviews": 12000, "rating": 4.7}, "B01N6GZ6IL": {"reviews": 6000, "rating": 4.5}, "B00DG8F04Y": {"reviews": 46000, "rating": 4.6}, "B08KT2Z93D": {"reviews": 63000, "rating": 4.7}, "B004AI97MA": {"reviews": 177000, "rating": 4.6}, "B07FKXN23D": {"reviews": 8000, "rating": 4.7}, "B000GCQ02Q": {"reviews": 45000, "rating": 4.4}, "B0D1XLXSSY": {"reviews": 3000, "rating": 4.7}, "B082965B6F": {"reviews": 1000, "rating": 4.1}, "B0CWK6YQ7V": {"reviews": 3000, "rating": 4.3}, "B00NWG9Q2M": {"reviews": 12000, "rating": 4.2}, "B01MUG8NFR": {"reviews": 25000, "rating": 4.0}, "B00949CTQQ": {"reviews": 113000, "rating": 4.5}, "B071D4D5DT": {"reviews": 40000, "rating": 4.6}, "B00OZEJ8R8": {"reviews": 4000, "rating": 4.5}, "B074JCCQC6": {"reviews": 4000, "rating": 4.5}, "B000052YDS": {"reviews": 35000, "rating": 4.2}, "B07P6Y8Z8L": {"reviews": 10541, "rating": 4.4}, "B00H9L3Q9C": {"reviews": 14329, "rating": 4.3}, "B07BJ4Y4J5": {"reviews": 2117, "rating": 4.3}}
+{
+  "B00TTD9BRC": {
+    "reviews": 142000,
+    "rating": 4.7
+  },
+  "B00NR1YQHM": {
+    "reviews": 92000,
+    "rating": 4.6
+  },
+  "B004KELK4C": {
+    "reviews": 29000,
+    "rating": 4.6
+  },
+  "B072NNC2LR": {
+    "reviews": 4000,
+    "rating": 4.7
+  },
+  "B09QBB8ZL4": {
+    "reviews": 5000,
+    "rating": 4.6
+  },
+  "B07PNCCLD2": {
+    "reviews": 43000,
+    "rating": 4.5
+  },
+  "B01MYEZPC8": {
+    "reviews": 32000,
+    "rating": 4.7
+  },
+  "B00387F42G": {
+    "reviews": 31000,
+    "rating": 4.3
+  },
+  "B07KL5K96X": {
+    "reviews": 9000,
+    "rating": 4.2
+  },
+  "B000EPA4GQ": {
+    "reviews": 36000,
+    "rating": 4.6
+  },
+  "B08CFVM1TT": {
+    "reviews": 19000,
+    "rating": 4.6
+  },
+  "B0862Q6BV9": {
+    "reviews": 18000,
+    "rating": 4.6
+  },
+  "B00LV6VDG2": {
+    "reviews": 36000,
+    "rating": 4
+  },
+  "B0009RFB76": {
+    "reviews": 42000,
+    "rating": 4.3
+  },
+  "B01MSSDEPK": {
+    "reviews": 111000,
+    "rating": 4.7
+  },
+  "B081KL2QYJ": {
+    "reviews": 42000,
+    "rating": 4.6
+  },
+  "B018A0BO92": {
+    "reviews": 8000,
+    "rating": 4.6
+  },
+  "B007SR3A8S": {
+    "reviews": 15000,
+    "rating": 4.5
+  },
+  "B07XQBY5QQ": {
+    "reviews": 15000,
+    "rating": 4.6
+  },
+  "B01MQXX9US": {
+    "reviews": 21000,
+    "rating": 4.7
+  },
+  "B00P4VLE50": {
+    "reviews": 12000,
+    "rating": 4.2
+  },
+  "B07B8DZN6B": {
+    "reviews": 1000,
+    "rating": 4.3
+  },
+  "B00QL67MY4": {
+    "reviews": 7000,
+    "rating": 4.3
+  },
+  "B01N34XW93": {
+    "reviews": 47000,
+    "rating": 4.7
+  },
+  "B00NP936A8": {
+    "reviews": 8000,
+    "rating": 4.4
+  },
+  "B076639783": {
+    "reviews": 3000,
+    "rating": 4.7
+  },
+  "B0B2RM68G2": {
+    "reviews": 36000,
+    "rating": 4.5
+  },
+  "B0BLGYF23V": {
+    "reviews": 6000,
+    "rating": 4.7
+  },
+  "B01N13W31F": {
+    "reviews": 9000,
+    "rating": 4.5
+  },
+  "B0037LRZHA": {
+    "reviews": 3000,
+    "rating": 4.6
+  },
+  "B00027DMI8": {
+    "reviews": 30000,
+    "rating": 4.4
+  },
+  "B0779YGB2G": {
+    "reviews": 15000,
+    "rating": 4.6
+  },
+  "B00NVK5Z4I": {
+    "reviews": 8000,
+    "rating": 4.4
+  },
+  "B004FHZKOA": {
+    "reviews": 44000,
+    "rating": 4.7
+  },
+  "B0054LHI5A": {
+    "reviews": 69000,
+    "rating": 4.8
+  },
+  "B0B2TKJVDH": {
+    "reviews": 7000,
+    "rating": 4.7
+  },
+  "B07XXPHQZK": {
+    "reviews": 54000,
+    "rating": 4.6
+  },
+  "B00VK5SERU": {
+    "reviews": 12000,
+    "rating": 4.7
+  },
+  "B01N6GZ6IL": {
+    "reviews": 6000,
+    "rating": 4.5
+  },
+  "B00DG8F04Y": {
+    "reviews": 46000,
+    "rating": 4.6
+  },
+  "B08KT2Z93D": {
+    "reviews": 63000,
+    "rating": 4.7
+  },
+  "B004AI97MA": {
+    "reviews": 177000,
+    "rating": 4.6
+  },
+  "B07FKXN23D": {
+    "reviews": 8000,
+    "rating": 4.7
+  },
+  "B000GCQ02Q": {
+    "reviews": 45000,
+    "rating": 4.4
+  },
+  "B0D1XLXSSY": {
+    "reviews": 3000,
+    "rating": 4.7
+  },
+  "B082965B6F": {
+    "reviews": 1000,
+    "rating": 4.1
+  },
+  "B0CWK6YQ7V": {
+    "reviews": 3000,
+    "rating": 4.3
+  },
+  "B00NWG9Q2M": {
+    "reviews": 12000,
+    "rating": 4.2
+  },
+  "B01MUG8NFR": {
+    "reviews": 25000,
+    "rating": 4
+  },
+  "B00949CTQQ": {
+    "reviews": 113000,
+    "rating": 4.5
+  },
+  "B071D4D5DT": {
+    "reviews": 40000,
+    "rating": 4.6
+  },
+  "B00OZEJ8R8": {
+    "reviews": 4000,
+    "rating": 4.5
+  },
+  "B074JCCQC6": {
+    "reviews": 4000,
+    "rating": 4.5
+  },
+  "B000052YDS": {
+    "reviews": 35000,
+    "rating": 4.2
+  },
+  "B07P6Y8Z8L": {
+    "reviews": 10541,
+    "rating": 4.4
+  },
+  "B00H9L3Q9C": {
+    "reviews": 14329,
+    "rating": 4.3
+  },
+  "B07BJ4Y4J5": {
+    "reviews": 2117,
+    "rating": 4.3
+  },
+  "B0084Y59VO": {
+    "reviews": 1200,
+    "rating": 4.5
+  },
+  "B00C2F61KY": {
+    "reviews": 500,
+    "rating": 4
+  },
+  "B01ET24GI4": {
+    "reviews": 900,
+    "rating": 4.3
+  },
+  "B07FCD5QZC": {
+    "reviews": 700,
+    "rating": 4.4
+  },
+  "B07PM79MSC": {
+    "reviews": 600,
+    "rating": 4.5
+  },
+  "B08NCRHNW9": {
+    "reviews": 800,
+    "rating": 4.5
+  },
+  "B08S1HL476": {
+    "reviews": 1500,
+    "rating": 4.6
+  },
+  "B09HN8JBFP": {
+    "reviews": 1000,
+    "rating": 4.6
+  },
+  "B09YCG7Q8V": {
+    "reviews": 400,
+    "rating": 4.2
+  },
+  "B0B3T7CT3Y": {
+    "reviews": 2200,
+    "rating": 4.5
+  },
+  "B0B61SX1QY": {
+    "reviews": 800,
+    "rating": 4.7
+  },
+  "B0BHX7NYJG": {
+    "reviews": 1000,
+    "rating": 4.6
+  },
+  "B0CBT1NMVL": {
+    "reviews": 600,
+    "rating": 4.4
+  },
+  "B0CN3QNN3T": {
+    "reviews": 1900,
+    "rating": 4.4
+  }
+}
