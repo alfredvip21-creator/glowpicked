@@ -8,7 +8,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Chemin vers nos vraies données
-const REAL_DATA_PATH = '/Users/alfred/.openclaw/workspace/projects/glowpicked/data/real-review-counts.json';
+const REAL_DATA_PATH = path.join(process.cwd(), '../data/real-review-counts.json');
 
 /**
  * Charge les vraies données Amazon depuis real-review-counts.json
